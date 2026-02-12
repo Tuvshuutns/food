@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { PhotoIcon } from "@/app/icons/photoIcon";
 import { useState } from "react";
+import Image from "next/image";
 import { Sonnera } from "./sonnera";
 
 const UPLOAD_PRESET = "Food....";
@@ -151,14 +152,11 @@ export function AddNewFood({ fetchData, categoryId }) {
                 )}
               </Label>
             ) : (
-              <img
+              <Image
                 src={logoUrl}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  borderRadius: "5px",
-                  objectFit: "cover",
-                }}
+                alt="Food image"
+                fill
+                className="rounded-[5px] object-cover"
               />
             )}
           </div>
