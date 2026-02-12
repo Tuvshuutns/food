@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import { LeftIcon } from "@/app/icons/leftIcon";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -119,9 +120,11 @@ export default function Home() {
         </p>
       </div>
       <div className="w-250 h-full">
-        <img
+        <Image
           src="/admin/delivery.png"
+          alt="Delivery service illustration"
           className="object-cover h-full w-full rounded-2xl"
+          fill
         />
       </div>
     </div>
